@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PoC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/PoC.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
