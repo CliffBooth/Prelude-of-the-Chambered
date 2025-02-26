@@ -5,10 +5,10 @@
     - [x] both should lead to a new options menu
     - [x] options menu should have buttons or a slider to change the game's volume
 
+[x] move to gradle build system
+
 [ ] Add ability to change window size
 
 [ ] add saves (should be easy with java serialization)
 
 [ ] add "dungeon mode" (or just another entrance to the dungeon) - randomly generated levels
-
-[ ]
