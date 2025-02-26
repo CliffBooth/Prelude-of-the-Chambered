@@ -1,0 +1,14 @@
+[x] Add ability to change game's sound volume
+    - [x] add variable that is responsible for game's volume
+
+    - [x] add "options" to the title menu and pause menu
+    - [x] both should lead to a new options menu
+    - [x] options menu should have buttons or a slider to change the game's volume
+
+[ ] Add ability to change window size
+
+[ ] add saves (should be easy with java serialization)
+
+[ ] add "dungeon mode" (or just another entrance to the dungeon) - randomly generated levels
+
+[ ]

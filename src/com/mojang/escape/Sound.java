@@ -31,6 +31,11 @@ public class Sound {
 			AudioInputStream ais = AudioSystem.getAudioInputStream(Sound.class.getResource(fileName));
 			Clip clip = AudioSystem.getClip();
 			clip.open(ais);
+
+			float volume = .2f;
+			FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+			gainControl.setValue(20f * (float) Math.log10(volume));
+
 			sound.clip = clip;
 		} catch (Exception e) {
 			System.out.println(e);
@@ -43,6 +48,16 @@ public class Sound {
 	public void play() {
 		try {
 			if (clip != null) {
+				if (Game.getVolume() > 1.0f && Game.getVolume() < 0.0f) {
+					System.out.println("ERROR: invalid volume: " + Game.getVolume());
+				} else {
+					FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+					gainControl.setValue(20f * (float) Math.log10(Game.getVolume()));
+
+					System.out.println("volume level = " + clip.getLevel());
+					System.out.println("volume = " + (float) Math.pow(10f, gainControl.getValue() / 20f));
+
+				}
 				new Thread() {
 					public void run() {
 						synchronized (clip) {
