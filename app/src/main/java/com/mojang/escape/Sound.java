@@ -48,11 +48,11 @@ public class Sound {
 	public void play() {
 		try {
 			if (clip != null) {
-				if (Game.getVolume() > 1.0f && Game.getVolume() < 0.0f) {
-					System.out.println("ERROR: invalid volume: " + Game.getVolume());
+				if (EscapeComponent.getVolume() > 1.0f && EscapeComponent.getVolume() < 0.0f) {
+					System.out.println("ERROR: invalid volume: " + EscapeComponent.getVolume());
 				} else {
 					FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-					gainControl.setValue(20f * (float) Math.log10(Game.getVolume()));
+					gainControl.setValue(20f * (float) Math.log10(EscapeComponent.getVolume()));
 
 					System.out.println("volume level = " + clip.getLevel());
 					System.out.println("volume = " + (float) Math.pow(10f, gainControl.getValue() / 20f));

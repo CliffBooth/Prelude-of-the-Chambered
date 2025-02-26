@@ -14,7 +14,7 @@ public class Game {
 	public int pauseTime;
 	public Menu menu;
 
-	private static float volume = .8f; // sound volume
+	// private static float volume = .8f; // sound volume
 
 	public Game() {
 		setMenu(new TitleMenu());
@@ -121,17 +121,4 @@ public class Game {
 		setMenu(new LoseMenu(player));
 	}
 
-	public static void setVolume(float volume) {
-		if (volume < 0) {
-			volume = 0;
-		}
-		if (volume > 1) {
-			volume = 1;
-		}
-		Game.volume = volume;
-	}
-
-	public static float getVolume() {
-		return volume;
-	}
 }

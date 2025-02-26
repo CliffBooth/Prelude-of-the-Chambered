@@ -13,6 +13,7 @@ public class EscapeComponent extends Canvas implements Runnable {
 	private static final int WIDTH = 160; //@ 160
 	private static final int HEIGHT = 120; //@ 120
 	private static final int SCALE = 5; //@ 4
+	private static float volume = .5f;
 
 	private boolean running;
 	private Thread thread;
@@ -162,4 +163,19 @@ public class EscapeComponent extends Canvas implements Runnable {
 
 		game.start();
 	}
+
+	public static void setVolume(float volume) {
+		if (volume < 0) {
+			volume = 0;
+		}
+		if (volume > 1) {
+			volume = 1;
+		}
+		EscapeComponent.volume = volume;
+	}
+
+	public static float getVolume() {
+		return volume;
+	}
+
 }

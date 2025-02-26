@@ -1,6 +1,7 @@
 package com.mojang.escape.menu;
 
 import com.mojang.escape.Art;
+import com.mojang.escape.EscapeComponent;
 import com.mojang.escape.Game;
 import com.mojang.escape.Sound;
 import com.mojang.escape.gui.Bitmap;
@@ -21,7 +22,7 @@ public class OptionsMenu extends Menu {
         target.fill(0, 0, 160, 120, 0);
         target.draw(Art.logo, 0, 8, 0, 0, 160, 36, Art.getCol(0xffffff));
 
-        float currentVolume = Game.getVolume();
+        float currentVolume = EscapeComponent.getVolume();
 
         for (int i = 0; i < options.length; i++) {
             String msg = options[i];
@@ -40,7 +41,7 @@ public class OptionsMenu extends Menu {
     private void changeVolume(boolean decrease) {
         float diff = decrease ? -changeVolumeDiff : changeVolumeDiff;
 
-        Game.setVolume((float) Math.round((Game.getVolume() + diff) * 10) / 10);
+        EscapeComponent.setVolume((float) Math.round((EscapeComponent.getVolume() + diff) * 10) / 10);
     }
 
     public void tick(Game game, boolean up, boolean down, boolean left, boolean right, boolean use) {
