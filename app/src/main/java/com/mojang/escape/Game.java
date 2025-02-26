@@ -3,7 +3,7 @@ package com.mojang.escape;
 import java.awt.event.KeyEvent;
 
 import com.mojang.escape.entities.*;
-import com.mojang.escape.level.Level;
+import com.mojang.escape.level.*;
 import com.mojang.escape.level.block.LadderBlock;
 import com.mojang.escape.menu.*;
 
@@ -14,15 +14,14 @@ public class Game {
 	public int pauseTime;
 	public Menu menu;
 
-	// private static float volume = .8f; // sound volume
-
 	public Game() {
 		setMenu(new TitleMenu());
 	}
 
 	public void newGame() {
 		Level.clear();
-		level = Level.loadLevel(this, "start");
+		// level = Level.loadLevel(this, "my");
+		level = GeneratedLevel.loadLevel(this);
 
 		player = new Player();
 		player.level = level;

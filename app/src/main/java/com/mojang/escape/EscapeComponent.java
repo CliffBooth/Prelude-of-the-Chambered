@@ -13,7 +13,7 @@ public class EscapeComponent extends Canvas implements Runnable {
 	private static final int WIDTH = 160; //@ 160
 	private static final int HEIGHT = 120; //@ 120
 	private static final int SCALE = 5; //@ 4
-	private static float volume = .5f;
+	private static float volume = .1f;
 
 	private boolean running;
 	private Thread thread;

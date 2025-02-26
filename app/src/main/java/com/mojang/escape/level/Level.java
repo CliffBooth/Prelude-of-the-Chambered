@@ -1,6 +1,7 @@
 package com.mojang.escape.level;
 
 import java.awt.image.BufferedImage;
+import java.lang.reflect.Constructor;
 import java.util.*;
 
 import javax.imageio.ImageIO;
@@ -181,7 +182,7 @@ public abstract class Level {
 	private static Level byName(String name) {
 		try {
 			name = name.substring(0, 1).toUpperCase() + name.substring(1);
-			return (Level) Class.forName("com.mojang.escape.level." + name + "Level").newInstance();
+			return (Level) Class.forName("com.mojang.escape.level." + name + "Level").getConstructor().newInstance();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

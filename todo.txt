@@ -1,3 +1,35 @@
+== todo ==
+
+[ ] add "dungeon mode" (or just another entrance to the dungeon) - randomly generated levels
+    - [x] make the character spawn in my new programatically created area
+    - [ ] how can you do so that you can look further?
+
+[ ] Add ability to change window size
+
+[ ] add saves (should be easy with java serialization)
+
+
+===big features===
+
+[ ] items
+    [ ] add item torch - that makes you see further
+        - [ ] how can you do so that you can look further?
+
+[ ] invenory
+    [ ] gear: armor, helmet, sword, shield, rings
+    [ ] you can upgrade sword (+1, +2, etc)
+[ ] stats: armor for starters
+
+[ ] traders
+
+[ ] npcs
+    [ ] you can interact with them, gives you dialog interface
+
+[ ] try to go to new level not through the ladder, but maybe through the gates? (so it is seamless)
+    - maybe at least make a portal instead of ladder
+
+===done===
+
 [x] Add ability to change game's sound volume
     - [x] add variable that is responsible for game's volume
 
@@ -6,9 +38,3 @@
     - [x] options menu should have buttons or a slider to change the game's volume
 
 [x] move to gradle build system
-
-[ ] Add ability to change window size
-
-[ ] add saves (should be easy with java serialization)
-
-[ ] add "dungeon mode" (or just another entrance to the dungeon) - randomly generated levels
